@@ -1,0 +1,47 @@
+version: "3.9"
+services:
+  postgres:
+    container_name: postgres_db
+    image: postgres:latest
+    volumes:
+      - ./init_db/data/yellow_tripdata_2020-01.csv:/init_db/data/yellow_tripdata_2020-01.csv
+    ports:
+      - 6432:5432
+    networks:
+      - project-network
+    environment:
+      POSTGRES_DB: taxi
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: taxiuser
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U show -d dbtest"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+
+
+  app:
+    container_name: python
+    build: ./app/
+    volumes:
+      - ./app/src/config.py:/app/config.py
+    command: sh -c "python raw.py && python core.py && python load.py"
+    ports:
+      - 4000:4000
+    depends_on:
+      postgres:
+        condition: service_healthy
+    links:
+      - postgres
+    networks:
+      - project-network
+ 
+networks:
+  project-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.32.0.0/16 # Подсеть для контейнеров
