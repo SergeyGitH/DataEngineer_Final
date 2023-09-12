@@ -1,4 +1,30 @@
+<<<<<<< HEAD
 ### Анализ файла на предмет качества данных
+=======
+-вся база
+select * from result.raw_base
+where Store_and_fwd_flag='Y'
+
+drop table result.raw_base
+
+--показать разные значения по количестве пассажиров
+select distinct passenger_count from result.raw_base
+--отсортировать пройденное расстояние от наименьшего
+select trip_distance from result.raw_base order by 1
+--отсортировать пройденное расстояние от наибольшего
+select trip_distance from result.raw_base order by 1 desc
+
+--отсортировать чаевые от наименьшего (большего)
+select tip_amount from result.raw_base order by 1
+
+--отсортировать полную стоимость поездки от наименьшего (большего)
+select Store_and_fwd_flag from result.raw_base order by 1 desc
+
+tpep_dropoff_datetime
+--другое
+select distinct tpep_dropoff_datetime from result.raw_base
+
+>>>>>>> fd79b6e (Добавление файлов)
 
 Passanger_count - КОличество пассажиров
 пассажиров бывает от 0 до 9. Есть значения NULL
