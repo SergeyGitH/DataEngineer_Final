@@ -16,16 +16,12 @@
 3. Jupiter Notebook;
 4. Docker.
 
-<span style="color:#0000FF;">Your text here</span>
-
 ### Выбранный стек технологий обусловлен следующими причинами:
 Размер исходного файла составляет 500... Мб, работа с данными не требует сложных и постоянных аналитических запросов, поэтому он обрабатывался в Dbeawer.  Необходимости в применении Clickhouse нет. Интепреттируемый язык программирования **PYTHON** c необходимыми библиотеками позволяет осуществлять взаимодействие с СУБД, формировать таблицы с отфильтрованными данными, обрабатывать данные с помощью Датафрейма и выполнять задачу в соотвествии с условиями Технического задания в том числе формировать графическое представление.
 
 * [Презентация проекта](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Презентация проекта")
 
-```diff
---------------------------------------------------------------------------------------------------------------------------
-```
+*************************************************************************************************************************
 
 КАРТИНКА ER-ДИАГРАММ
 
@@ -43,11 +39,11 @@ docker-compose up
 2. Подключение к СУБД
 3. Копирование исходного файла  yellow_tripdata в СУБД без каких-либо изменений.
 4. С помощью SQL запросов в BDeaver проведен анализ качества данных представленных в файле yellow_tripdata...csv
-   *Отчет по качеству исходных данных [здесь](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Отчет о фильтрации данных").*
+   <p>*Отчет по качеству исходных данных [здесь](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Отчет о фильтрации данных").*</p>
 5. Извлечение части данных в другую таблицу с учетом их очистки от пустых и явно ошибочных значений.
    
-  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw1.png" height="232"/>
-  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw2.png" height="332"/>
+  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw1.png" height="432"/>
+  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw2.png" height="432"/>
 
 #### *core.py*
 1. Создание витрины данных о соотношении количества поездок с различным количеством пассажиров в различные дни.
