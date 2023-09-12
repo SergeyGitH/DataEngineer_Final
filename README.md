@@ -23,9 +23,6 @@
 * [Презентация проекта](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Презентация проекта")
 
 
-```diff
-+ ****************************************************
-```
 
 КАРТИНКА ER-ДИАГРАММ
 
@@ -37,8 +34,9 @@ docker-compose up
 Скачайте файл исходных данных (здесь). Положите его в папку *init_db/data*
 
 Далее работа происходит работа в Jupiter Notebook
-# ```diff
-- raw.py
+```diff
+/ -
+raw.py
 ```
 Формрование *raw.py*:
 1.Импорт необходимых библиотек
@@ -55,6 +53,7 @@ docker-compose up
 ```diff
 + core.py
 ```
+<span style="color:red;">Your text here</span>
 
     Создание витрины данных о соотношении количества поездок с различным количеством пассажиров в различные дни.
 
