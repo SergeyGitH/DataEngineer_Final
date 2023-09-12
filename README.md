@@ -19,10 +19,15 @@
 
 Файл с исходными данными службы такси обрабтывался в Dbeawer. Размер файла небольшой, работа с данными не требует сложных и постоянных аналитических запросов. Необходимости в применении Clickhouse нет. Интепреттируемый язык программирования python c необходимыми библиотеками позволяет осуществлять взаимодействие с СУБД, формировать таблицы с отфильтрованными данными, обрабатывать данные с помощью Датафрейма и выполнять задачу в соотвествии с условиями Технического задания.
 
+[Техническое задание](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Техническое задание") 
+[Требования и рекомендации для итоговой аттестации ](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Требования и рекомендации для итоговой аттестации ")
+[Презентация проекта](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Презентация проекта")
+
 ```diff
-- [Техническое задание](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Техническое задание") 
-- [Требования и рекомендации для итоговой аттестации ](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Требования и рекомендации для итоговой аттестации ")
-- [Презентация проекта](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Презентация проекта")
+- красный текст
++ text in green
+! text in orange
+# text in gray
 ```
 
 КАРТИНКА ER-ДИАГРАММ
