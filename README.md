@@ -36,8 +36,7 @@ cd ...
 docker-compose up
 ```
 Скачайте файл исходных данных (здесь). Положите его в папку *init_db/data*
-
-Далее работа происходит работа в Jupiter Notebook
+Далее работа происходит в Jupiter Notebook
 
 #### Создание *raw.py*
 1. Импорт необходимых библиотек
@@ -47,8 +46,8 @@ docker-compose up
    *Отчет по качеству исходных данных [здесь](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Отчет о фильтрации данных").*
 5. Извлечение части данных в другую таблицу с учетом их очистки от пустых и явно ошибочных значений.
    
-  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw1.png" height="32"/>
-  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw2.png" height="32"/>
+  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw1.png" height="232"/>
+  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw2.png" height="332"/>
 
 #### *core.py*
 1. Создание витрины данных о соотношении количества поездок с различным количеством пассажиров в различные дни.
