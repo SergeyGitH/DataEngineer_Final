@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
 ### Анализ файла на предмет качества данных
 
+=======
+<<<<<<< HEAD
+### Анализ файла на предмет качества данных
+=======
+>>>>>>> ca05a1c00bc41fb12bcde6dcbcd7d858fd5ca1a1
 -вся база
 select * from result.raw_base
 where Store_and_fwd_flag='Y'
@@ -24,6 +30,11 @@ tpep_dropoff_datetime
 --другое
 select distinct tpep_dropoff_datetime from result.raw_base
 
+<<<<<<< HEAD
+=======
+>>>>>>> fd79b6e (Добавление файлов)
+
+>>>>>>> ca05a1c00bc41fb12bcde6dcbcd7d858fd5ca1a1
 Passanger_count - КОличество пассажиров
 пассажиров бывает от 0 до 9. Есть значения NULL
 
