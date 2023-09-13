@@ -1,3 +1,6 @@
+
+### Анализ файла на предмет качества данных
+
 -вся база
 select * from result.raw_base
 where Store_and_fwd_flag='Y'
@@ -20,7 +23,6 @@ select Store_and_fwd_flag from result.raw_base order by 1 desc
 tpep_dropoff_datetime
 --другое
 select distinct tpep_dropoff_datetime from result.raw_base
-
 
 Passanger_count - КОличество пассажиров
 пассажиров бывает от 0 до 9. Есть значения NULL

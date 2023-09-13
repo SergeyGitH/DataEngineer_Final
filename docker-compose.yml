@@ -14,20 +14,19 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: taxiuser
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U show -d dbtest"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
       retries: 5
-      start_period: 10s
-    restart: unless-stopped
-
+    restart: always
 
   app:
     container_name: python
     build: ./app/
     volumes:
       - ./app/src/config.py:/app/config.py
-    command: sh -c "python raw.py && python core.py && python load.py"
+      - ./app/src/raw.py:/app/raw.py
+      - ./app/src/core.py:/app/core.py
+    command: sh -c "python raw.py && python core.py"
     ports:
       - 4000:4000
     depends_on:

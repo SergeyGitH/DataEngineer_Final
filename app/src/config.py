@@ -1,5 +1,5 @@
 host = 'postgres_db'
 port = '5432'
-username = 'user'
+username = 'postgres'
 password = 'taxiuser'
 database = 'taxi'

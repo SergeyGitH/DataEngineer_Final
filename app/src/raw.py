@@ -5,11 +5,11 @@ import pandas as pd
 
 # Подключение к базе данных
 connection = psycopg2.connect(
-    host="localhost",
-    port="6432",
-    user="postgres",
-    password="taxiuser",
-    database="taxi"
+    host=c.host,
+    port=c.port,
+    user=c.username,
+    password=c.password,
+    database=c.database
 )
 print('Загрузка данных в raw-слой')
 
@@ -42,7 +42,7 @@ print("Данные в таблицу внесены")
 
 # Создание и наполнение второй таблицы для последующей фильтрации данных и подготовки к выполениею задач
 cur = connection.cursor()
-query_create = ("CREATE TABLE IF NOT EXISTS result.core_data (passenger_count INT, trip_distance FLOAT," 
+query_create = ("CREATE TABLE IF NOT EXISTS result.core_data (date TIMESTAMP, passenger_count INT, trip_distance FLOAT," 
                     "tip_amount FLOAT, total_amount FLOAT);")
 cur.execute(query_create)
 connection.commit()
@@ -51,12 +51,12 @@ print("База создана")
 
 #Создание таблицы с необходимыми для последующего анализа стобцами с учетом фильтрации от некорректных данных
 cur.execute("ROLLBACK;")
-insert_query = ("INSERT INTO result.core_data (passenger_count, trip_distance, tip_amount, total_amount) "
-                    "(SELECT passenger_count, trip_distance, tip_amount, total_amount "
-                    "FROM result.raw_data WHERE (passenger_count IS NOT NULL AND "
-                    "trip_distance > 0 AND "
-                    "tip_amount > 0 AND "
-                    "total_amount > 0 ))")
+insert_query = ("INSERT INTO result.core_data (date, passenger_count, trip_distance, tip_amount, total_amount) "
+"(SELECT DATE(tpep_dropoff_datetime::timestamp), passenger_count, trip_distance, tip_amount, total_amount "
+"FROM result.raw_data WHERE (passenger_count IS NOT NULL AND "
+"trip_distance > 0 AND "
+"tip_amount > 0 AND "
+"total_amount > 0 ))")
 cur.execute(insert_query)
 connection.commit()
 cur.close()
