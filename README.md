@@ -60,18 +60,15 @@ docker-compose up
 <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load1.png" />  
 <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load2.png" />  
 
+Таблица с самой дорогой и самой дешевой поездкой для каждой группы
+
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D1%81%20%D1%87%D0%B0%D0%B5%D0%B2%D1%8B%D0%BC%D0%B8.png" height="432"/>
 
 *Выгрузка витрин из БД в формат parquet*
 ```python
     percentageParq.to_parquet('/parquet/result_passengers_base.parquet', index=False)
 ```  
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D1%81%20%D0%BF%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D0%B0%D0%BC%D0%B8.png" height="432"/>
-
-Таблица с самой дорогой и самой дешевой поездкой для каждой группы
-
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D1%81%20%D1%87%D0%B0%D0%B5%D0%B2%D1%8B%D0%BC%D0%B8.png" height="432"/>
-
-Итоговый файл в формате [parquet](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/parquet/result_passengers_base.parquet "parquet")
+[Итоговый файл в формате parquet](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/parquet/result_passengers_base.parquet "parquet")
 
 ### Полученные таблицы   
 
