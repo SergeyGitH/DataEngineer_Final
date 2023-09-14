@@ -6,15 +6,11 @@
 
 *Дополнительно: также провести аналитику и построить график на тему «Как пройденное расстояние и количество пассажиров влияет на чаевые» в любом удобном инструменте.*
 
-<<<<<<< HEAD
-* [Техническое задание](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Техническое задание")
-  
-* [Требования и рекомендации для итоговой аттестации ](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt "Требования и рекомендации для итоговой аттестации ")
-=======
+******************************************************************************************************************
+
 * [Техническое задание](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5.txt "Техническое задание")
   
 * [Требования и рекомендации для итоговой аттестации ](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/%D0%A2%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B8%20%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D0%B8%D1%82%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B0%D1%82%D1%82%D0%B5%D1%81%D1%82%D0%B0%D1%86%D0%B8%D0%B8.txt "Требования и рекомендации для итоговой аттестации ")
->>>>>>> ca05a1c00bc41fb12bcde6dcbcd7d858fd5ca1a1
 
 ### Используемые технологии
 1. СУБД Postgres;
@@ -29,16 +25,16 @@
 
 *************************************************************************************************************************
 
-КАРТИНКА ER-ДИАГРАММ
-
 ### <p align="center">ТЕХНИЧЕСКОЕ ОПИСАНИЕ</p> 
-`На первоначальном этапе необходимо развернуть Docker`
+
+Скачайте файл исходных данных [yellow_tripdata](https://disk.yandex.ru/d/DKeoopbGH1Ttuw). Положите его в папку *init_db/data*
+Далее работа происходит в Jupiter Notebook
+
+`Далее необходимо развернуть Docker`
 ```
 cd ...
 docker-compose up
 ```
-Скачайте файл исходных данных [yellow_tripdata](https://disk.yandex.ru/d/DKeoopbGH1Ttuw). Положите его в папку *init_db/data*
-Далее работа происходит в Jupiter Notebook
 
 #### Создание *raw.py*
 1. Импорт необходимых библиотек
@@ -56,8 +52,6 @@ docker-compose up
 2. Создание витрины данных о максимальном и минимальном значении полной стоимости поездки такси с различным количеством пассажиров в различные дни.
 3. Заполнение витрин происходит через запрос к БД.
 
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/core.png" />
-
 ### load.py
 
     Выгрузка витрин из БД в формат parquet.
@@ -66,6 +60,18 @@ docker-compose up
     <?php phpinfo();?>
 ```
 
+Таблица с пассажирами 
+
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D1%81%20%D0%BF%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D0%B0%D0%BC%D0%B8.png" height="432"/>
+
+Таблица по расчету размера чаевых с самой дорогой и самой дешевой поездкой для каждой группы
+
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D1%81%20%D1%87%D0%B0%D0%B5%D0%B2%D1%8B%D0%BC%D0%B8.png" height="432"/>
+
+Итоговый файл в формате parquet [Презентация проекта](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/parquet/result_passengers_base.parquet "parquet")
+
+Полученные таблицы 
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/taxi%20-%20result.png />
 
 #### *Проблемы*
 В представленном Техническом задании выявлено несоответствие названия столбцов со столбцами представленными в исходном файле csv
