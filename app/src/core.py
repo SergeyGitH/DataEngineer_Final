@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import config as c
 import psycopg2
 import pandas as pd
@@ -14,22 +13,7 @@ connection = psycopg2.connect(
 )
 print('Подключение к базе успешно')
 cur = connection.cursor()
-#cur.execute("ROLLBACK;")
->>>>>>> temp-branch
-=======
-import psycopg2
 
-connection = psycopg2.connect(
-    host="localhost",
-    port="6432",
-    user="postgres",
-    password="taxiuser",
-    database="taxi"
-)
-print('Подключение к базе успешно')
-
-cur.execute("ROLLBACK;")
->>>>>>> ca05a1c00bc41fb12bcde6dcbcd7d858fd5ca1a1
 create_table_query = """CREATE TABLE IF NOT EXISTS result.passengers_base(
 date DATE,
 percentage_zero FLOAT,
@@ -50,13 +34,8 @@ min_amount_perc_4p_plus FLOAT
 );"""
 cur.execute(create_table_query)
 
-
-<<<<<<< HEAD
 connection.commit()
 
-=======
-onnection.commit()
->>>>>>> ca05a1c00bc41fb12bcde6dcbcd7d858fd5ca1a1
 print('Создание result.passengers_base данных завершено')
 
 insert_data_query = """INSERT INTO result.passengers_base (
