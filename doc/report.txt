@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-
 ### Анализ файла на предмет качества данных
 
-=======
-<<<<<<< HEAD
-### Анализ файла на предмет качества данных
-=======
->>>>>>> ca05a1c00bc41fb12bcde6dcbcd7d858fd5ca1a1
 -вся база
+
+```python
+    <?php phpinfo();?>
+```
 select * from result.raw_base
 where Store_and_fwd_flag='Y'
 
