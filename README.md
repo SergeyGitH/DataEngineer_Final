@@ -27,7 +27,8 @@
 
 ### <p align="center">ТЕХНИЧЕСКОЕ ОПИСАНИЕ</p> 
 
-Скачайте файл исходных данных [yellow_tripdata](https://disk.yandex.ru/d/DKeoopbGH1Ttuw). Положите его в папку *init_db/data*
+Скачайте файл исходных данных [yellow_tripdata](https://disk.yandex.ru/d/DKeoopbGH1Ttuw).  
+Положите его в папку *init_db/data*
 Далее работа происходит в Jupiter Notebook
 
 `Далее необходимо развернуть Docker`
