@@ -50,15 +50,15 @@ docker-compose up
 #### Создание *core.py*
 Извлечение части данных с учетом их очистки от пустых и явно ошибочных значений
 
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/core.png" />
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/core.png" />  
 
 *Создание витрины данных о соотношении количества поездок с различным количеством пассажиров в различные дни*
 
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D1%81%20%D0%BF%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D0%B0%D0%BC%D0%B8.png" "/>
+<imgsrc="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D1%81%20%D0%BF%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D0%B0%D0%BC%D0%B8.png" />
 
 *Создание витрины данных о максимальном и минимальном значении полной стоимости поездки такси с различным количеством пассажиров в различные дни. Полученная таблица passengers_base*
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load1.png" "/>  
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load2.png" "/>  
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load1.png" />  
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load2.png" />  
 
 
     *Выгрузка витрин из БД в формат parquet*
