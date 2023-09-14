@@ -41,24 +41,24 @@ docker-compose up
 2. Подключение к СУБД;
 3. Копирование исходного файла в СУБД без каких-либо изменений;
 4. С помощью SQL запросов в BDeaver проведен анализ качества данных представленных в файле;
-   *Отчет по качеству исходных данных* [здесь](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/README.md).
+   *Работа над данными и отчет над их качеством * [здесь](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/README.md).
 
    *Сформированные таблицы с неотфильтрованными данными (raw_data)*  
-  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw1.png" "/>
-  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw2.png" "/>
+  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw1.png" />
+  <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw2.png" />
 
 #### Создание *core.py*
 Извлечение части данных с учетом их очистки от пустых и явно ошибочных значений
 
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/core.png" "/>
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/core.png" />
 
 *Создание витрины данных о соотношении количества поездок с различным количеством пассажиров в различные дни*
 
 <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D1%81%20%D0%BF%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D0%B0%D0%BC%D0%B8.png" "/>
 
 *Создание витрины данных о максимальном и минимальном значении полной стоимости поездки такси с различным количеством пассажиров в различные дни. Полученная таблица passengers_base*
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load1.png " "/>  
-<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load2.png " "/>  
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load1.png" "/>  
+<img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/load2.png" "/>  
 
 
     *Выгрузка витрин из БД в формат parquet*
@@ -80,8 +80,9 @@ docker-compose up
 
 *В Техническом задании и исходном файле csv имеются отличия в названии столбцов*
 
-### Дополнительное задание
-Проведение аналитики и построение графика на тему «Как пройденное расстояние и количество пассажиров влияет на чаевые  
+### Дополнительное задание  
+**Проведение аналитики и построение графика на тему «Как пройденное расстояние и количество пассажиров влияет на чаевые**  
+
 ![image](https://github.com/SergeyGitH/DataEngineer_Final/assets/136009620/827e3dd8-5071-43f2-bd69-ca02c6a1d1eb)
 
 <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/analisys.png" />
