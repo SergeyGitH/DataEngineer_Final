@@ -41,7 +41,7 @@ docker-compose up
 2. Подключение к СУБД
 3. Копирование исходного файла в СУБД без каких-либо изменений.
 4. С помощью SQL запросов в BDeaver проведен анализ качества данных представленных в файле.
-   *Отчет по качеству исходных данных* [здесь](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/report.txt).
+   *Отчет по качеству исходных данных* [здесь](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/README.md).
 5. Извлечение части данных в другую таблицу с учетом их очистки от пустых и явно ошибочных значений.
    
   <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw1.png" height="432"/>
