@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Загрузка данных из файла
-data = pd.read_csv('D:/GitProject/load.csv')
+data = pd.read_csv('/init_db/data/load.csv')
 
 # Выбор необходимых столбцов
 df = data[['tip_amount', 'trip_distance', 'passenger_count']]
