@@ -6,7 +6,7 @@ services:
     volumes:
       - ./init_db/data/yellow_tripdata_2020-01.csv:/init_db/data/yellow_tripdata_2020-01.csv
     ports:
-      - 6432:5432
+      - 5432:5432
     networks:
       - project-network
     environment:
