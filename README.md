@@ -36,19 +36,17 @@ cd ...
 docker-compose up
 ```
   
-#### Создание *raw.py*
-1. Импорт необходимых библиотек;
-2. Подключение к СУБД;
-3. Копирование исходного файла в СУБД без каких-либо изменений;
-4. С помощью SQL запросов в BDeaver проведен анализ качества данных представленных в файле;
+Подключение к СУБД с помощью файла config.py
+
+C помощью SQL запросов в BDeaver проведен анализ качества данных представленных в файле;
    *Работа над данными и отчет над их качеством * [здесь](https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/README.md).
 
    *Сформированные таблицы с неотфильтрованными данными (raw_data)*  
   <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw1.png" />
   <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/raw2.png" />
 
-#### Создание *core.py*
-Извлечение части данных с учетом их очистки от пустых и явно ошибочных значений
+#### *core.py*
+Извлечение из полного набора данных очищенных данных в соотвествии с ТЗ (таблица core_data)
 
 <img src="https://github.com/SergeyGitH/DataEngineer_Final/blob/master/doc/img/core.png" />  
 
